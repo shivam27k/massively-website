@@ -263,6 +263,8 @@ i:hover{
     padding-bottom: 8rem;
 }
 
+
+
 .cards-date{
     font-family: "Merriweather", Georgia, serif;
     font-size: 1.2rem;
@@ -344,7 +346,7 @@ i:hover{
 .left-side{
     border-right: 2px solid rgba(0, 0, 0, 0.158);
     padding: 6rem;
-    width: 50%;
+    width: 100%;
 }
 
 form{
@@ -398,6 +400,7 @@ textarea{
 
 .details{
     border-bottom: 2px solid rgba(0, 0, 0, 0.158);
+    /* width: 100%; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -449,7 +452,6 @@ textarea{
 /* copyright-section */
 
 #copyright-section{
-    /* border: 2px solid black; */
     height: fit-content;
     padding: 4rem 10rem 6rem 10rem;
     display: flex;
@@ -474,6 +476,7 @@ textarea{
 
 #copyright-section-mobile{
     display: none;
+    flex-direction: column;
     height: fit-content;
     padding: 4rem 10rem 6rem 10rem;
     justify-content: center;
@@ -482,4 +485,79 @@ textarea{
     font-size: 1.4rem;
     font-weight: 900;
     color: #909498;
+}
+
+.mobile-display{
+    display: none;
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 1370px) {
+
+    #form-and-details{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .left-side{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 1rem; */
+        border: 2px solid rgba(0, 0, 0, 0.158);
+        padding: 3rem;
+    }
+
+    .right-side{
+        border: 2px solid rgba(0, 0, 0, 0.158);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .details{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    #header{
+    gap: 45rem;
+    }
+
+}
+
+@media only screen and (max-width: 1260px) {
+    #header{
+    display: none;
+    }
+    .mobile-display{
+        display: flex;
+    }
+    #display-story{
+        display: none;
+    }
+    #cards-section{
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: border-box; */
+    /* width: 100%; */
+    }
+    #copyright-section{
+        display: none;
+    }
+    #copyright-section-mobile{
+        display: flex;
+    }
+    .cards img {
+    height: auto;
+    width: 50rem;
+    }
+    #credits-para{
+        width: fit-content;
+    }
+    
 }
